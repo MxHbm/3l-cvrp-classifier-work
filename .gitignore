@@ -9,3 +9,8 @@ python/visualization/__pycache__/
 python/.venv/
 # ruff
 .ruff_cache
+
+#Vs code stuff
+/.vs/.*
+/.vs
+.vs/
