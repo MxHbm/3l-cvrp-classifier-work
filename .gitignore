@@ -14,3 +14,8 @@ python/.venv/
 /.vs/.*
 /.vs
 .vs/
+
+#Vs code stuff
+/.vscode/.*
+/.vscode
+.vscode/
