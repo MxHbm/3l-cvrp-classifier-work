@@ -1,0 +1,984 @@
+{
+    "Name": "142_n060_m200_bt10",
+    "Vehicles": [
+        {
+            "Capacity": 12595,
+            "Length": 60,
+            "Width": 25,
+            "Height": 45000
+        },
+        {
+            "Capacity": 12595,
+            "Length": 60,
+            "Width": 25,
+            "Height": 45000
+        },
+        {
+            "Capacity": 12595,
+            "Length": 60,
+            "Width": 25,
+            "Height": 45000
+        },
+        {
+            "Capacity": 12595,
+            "Length": 60,
+            "Width": 25,
+            "Height": 45000
+        },
+        {
+            "Capacity": 12595,
+            "Length": 60,
+            "Width": 25,
+            "Height": 45000
+        },
+        {
+            "Capacity": 12595,
+            "Length": 60,
+            "Width": 25,
+            "Height": 45000
+        },
+        {
+            "Capacity": 12595,
+            "Length": 60,
+            "Width": 25,
+            "Height": 45000
+        },
+        {
+            "Capacity": 12595,
+            "Length": 60,
+            "Width": 25,
+            "Height": 45000
+        },
+        {
+            "Capacity": 12595,
+            "Length": 60,
+            "Width": 25,
+            "Height": 45000
+        },
+        {
+            "Capacity": 12595,
+            "Length": 60,
+            "Width": 25,
+            "Height": 45000
+        },
+        {
+            "Capacity": 12595,
+            "Length": 60,
+            "Width": 25,
+            "Height": 45000
+        }
+    ],
+    "Nodes": [
+        {
+            "Customer ID": 0,
+            "x": 35,
+            "y": 35,
+            "Ready Time": 0,
+            "Due Date": 1000,
+            "Service Time": 0,
+            "Demanded Mass": 0.0,
+            "Demanded Volume": 0,
+            "Items": []
+        },
+        {
+            "Customer ID": 37,
+            "x": 54,
+            "y": 19,
+            "Ready Time": 0,
+            "Due Date": 957,
+            "Service Time": 10,
+            "Demanded Mass": 633.78,
+            "Demanded Volume": 978,
+            "Items": [
+                {
+                    "Quantity": 1,
+                    "Weight": 138.28,
+                    "Length": 10,
+                    "Width": 7,
+                    "Height": 3,
+                    "Volume": 210,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 2,
+                    "Weight": 247.75,
+                    "Length": 12,
+                    "Width": 4,
+                    "Height": 8,
+                    "Volume": 384,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                }
+            ]
+        },
+        {
+            "Customer ID": 1,
+            "x": 18,
+            "y": 34,
+            "Ready Time": 140,
+            "Due Date": 448,
+            "Service Time": 10,
+            "Demanded Mass": 806.9,
+            "Demanded Volume": 1499,
+            "Items": [
+                {
+                    "Quantity": 1,
+                    "Weight": 117.2,
+                    "Length": 12,
+                    "Width": 5,
+                    "Height": 4,
+                    "Volume": 240,
+                    "Fragility": 1,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 138.28,
+                    "Length": 10,
+                    "Width": 7,
+                    "Height": 3,
+                    "Volume": 210,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 116.18,
+                    "Length": 11,
+                    "Width": 7,
+                    "Height": 7,
+                    "Volume": 539,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 217.32,
+                    "Length": 11,
+                    "Width": 5,
+                    "Height": 6,
+                    "Volume": 330,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 217.92,
+                    "Length": 12,
+                    "Width": 3,
+                    "Height": 5,
+                    "Volume": 180,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                }
+            ]
+        },
+        {
+            "Customer ID": 18,
+            "x": 66,
+            "y": 15,
+            "Ready Time": 0,
+            "Due Date": 953,
+            "Service Time": 10,
+            "Demanded Mass": 370.64,
+            "Demanded Volume": 1288,
+            "Items": [
+                {
+                    "Quantity": 1,
+                    "Weight": 138.28,
+                    "Length": 10,
+                    "Width": 7,
+                    "Height": 3,
+                    "Volume": 210,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 2,
+                    "Weight": 116.18,
+                    "Length": 11,
+                    "Width": 7,
+                    "Height": 7,
+                    "Volume": 539,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                }
+            ]
+        },
+        {
+            "Customer ID": 14,
+            "x": 51,
+            "y": 45,
+            "Ready Time": 0,
+            "Due Date": 971,
+            "Service Time": 10,
+            "Demanded Mass": 633.48,
+            "Demanded Volume": 966,
+            "Items": [
+                {
+                    "Quantity": 1,
+                    "Weight": 33.52,
+                    "Length": 6,
+                    "Width": 6,
+                    "Height": 3,
+                    "Volume": 108,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 213.93,
+                    "Length": 11,
+                    "Width": 6,
+                    "Height": 4,
+                    "Volume": 264,
+                    "Fragility": 1,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 138.28,
+                    "Length": 10,
+                    "Width": 7,
+                    "Height": 3,
+                    "Volume": 210,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 247.75,
+                    "Length": 12,
+                    "Width": 4,
+                    "Height": 8,
+                    "Volume": 384,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                }
+            ]
+        },
+        {
+            "Customer ID": 16,
+            "x": 43,
+            "y": 10,
+            "Ready Time": 54,
+            "Due Date": 296,
+            "Service Time": 10,
+            "Demanded Mass": 534.26,
+            "Demanded Volume": 726,
+            "Items": [
+                {
+                    "Quantity": 1,
+                    "Weight": 249.9,
+                    "Length": 12,
+                    "Width": 5,
+                    "Height": 3,
+                    "Volume": 180,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 2,
+                    "Weight": 33.52,
+                    "Length": 6,
+                    "Width": 6,
+                    "Height": 3,
+                    "Volume": 108,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 217.32,
+                    "Length": 11,
+                    "Width": 5,
+                    "Height": 6,
+                    "Volume": 330,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                }
+            ]
+        },
+        {
+            "Customer ID": 35,
+            "x": 66,
+            "y": 32,
+            "Ready Time": 0,
+            "Due Date": 958,
+            "Service Time": 10,
+            "Demanded Mass": 1080.52,
+            "Demanded Volume": 1368,
+            "Items": [
+                {
+                    "Quantity": 1,
+                    "Weight": 249.9,
+                    "Length": 12,
+                    "Width": 5,
+                    "Height": 3,
+                    "Volume": 180,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 117.2,
+                    "Length": 12,
+                    "Width": 5,
+                    "Height": 4,
+                    "Volume": 240,
+                    "Fragility": 1,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 2,
+                    "Weight": 247.75,
+                    "Length": 12,
+                    "Width": 4,
+                    "Height": 8,
+                    "Volume": 384,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 217.92,
+                    "Length": 12,
+                    "Width": 3,
+                    "Height": 5,
+                    "Volume": 180,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                }
+            ]
+        },
+        {
+            "Customer ID": 9,
+            "x": 40,
+            "y": 61,
+            "Ready Time": 0,
+            "Due Date": 963,
+            "Service Time": 10,
+            "Demanded Mass": 963.63,
+            "Demanded Volume": 804,
+            "Items": [
+                {
+                    "Quantity": 3,
+                    "Weight": 249.9,
+                    "Length": 12,
+                    "Width": 5,
+                    "Height": 3,
+                    "Volume": 180,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 213.93,
+                    "Length": 11,
+                    "Width": 6,
+                    "Height": 4,
+                    "Volume": 264,
+                    "Fragility": 1,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                }
+            ]
+        },
+        {
+            "Customer ID": 46,
+            "x": 17,
+            "y": 41,
+            "Ready Time": 71,
+            "Due Date": 227,
+            "Service Time": 10,
+            "Demanded Mass": 715.57,
+            "Demanded Volume": 744,
+            "Items": [
+                {
+                    "Quantity": 1,
+                    "Weight": 249.9,
+                    "Length": 12,
+                    "Width": 5,
+                    "Height": 3,
+                    "Volume": 180,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 247.75,
+                    "Length": 12,
+                    "Width": 4,
+                    "Height": 8,
+                    "Volume": 384,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 217.92,
+                    "Length": 12,
+                    "Width": 3,
+                    "Height": 5,
+                    "Volume": 180,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                }
+            ]
+        },
+        {
+            "Customer ID": 42,
+            "x": 62,
+            "y": 28,
+            "Ready Time": 0,
+            "Due Date": 962,
+            "Service Time": 10,
+            "Demanded Mass": 495.5,
+            "Demanded Volume": 768,
+            "Items": [
+                {
+                    "Quantity": 2,
+                    "Weight": 247.75,
+                    "Length": 12,
+                    "Width": 4,
+                    "Height": 8,
+                    "Volume": 384,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                }
+            ]
+        },
+        {
+            "Customer ID": 21,
+            "x": 53,
+            "y": 70,
+            "Ready Time": 0,
+            "Due Date": 950,
+            "Service Time": 10,
+            "Demanded Mass": 606.1,
+            "Demanded Volume": 570,
+            "Items": [
+                {
+                    "Quantity": 1,
+                    "Weight": 249.9,
+                    "Length": 12,
+                    "Width": 5,
+                    "Height": 3,
+                    "Volume": 180,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 138.28,
+                    "Length": 10,
+                    "Width": 7,
+                    "Height": 3,
+                    "Volume": 210,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 217.92,
+                    "Length": 12,
+                    "Width": 3,
+                    "Height": 5,
+                    "Volume": 180,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                }
+            ]
+        },
+        {
+            "Customer ID": 2,
+            "x": 31,
+            "y": 44,
+            "Ready Time": 593,
+            "Due Date": 841,
+            "Service Time": 10,
+            "Demanded Mass": 548.45,
+            "Demanded Volume": 834,
+            "Items": [
+                {
+                    "Quantity": 1,
+                    "Weight": 117.2,
+                    "Length": 12,
+                    "Width": 5,
+                    "Height": 4,
+                    "Volume": 240,
+                    "Fragility": 1,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 213.93,
+                    "Length": 11,
+                    "Width": 6,
+                    "Height": 4,
+                    "Volume": 264,
+                    "Fragility": 1,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 217.32,
+                    "Length": 11,
+                    "Width": 5,
+                    "Height": 6,
+                    "Volume": 330,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                }
+            ]
+        },
+        {
+            "Customer ID": 54,
+            "x": 44,
+            "y": 50,
+            "Ready Time": 835,
+            "Due Date": 1000,
+            "Service Time": 10,
+            "Demanded Mass": 551.42,
+            "Demanded Volume": 1049,
+            "Items": [
+                {
+                    "Quantity": 1,
+                    "Weight": 116.18,
+                    "Length": 11,
+                    "Width": 7,
+                    "Height": 7,
+                    "Volume": 539,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 217.32,
+                    "Length": 11,
+                    "Width": 5,
+                    "Height": 6,
+                    "Volume": 330,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 217.92,
+                    "Length": 12,
+                    "Width": 3,
+                    "Height": 5,
+                    "Volume": 180,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                }
+            ]
+        },
+        {
+            "Customer ID": 15,
+            "x": 50,
+            "y": 33,
+            "Ready Time": 0,
+            "Due Date": 974,
+            "Service Time": 10,
+            "Demanded Mass": 832.77,
+            "Demanded Volume": 984,
+            "Items": [
+                {
+                    "Quantity": 1,
+                    "Weight": 249.9,
+                    "Length": 12,
+                    "Width": 5,
+                    "Height": 3,
+                    "Volume": 180,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 117.2,
+                    "Length": 12,
+                    "Width": 5,
+                    "Height": 4,
+                    "Volume": 240,
+                    "Fragility": 1,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 247.75,
+                    "Length": 12,
+                    "Width": 4,
+                    "Height": 8,
+                    "Volume": 384,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 217.92,
+                    "Length": 12,
+                    "Width": 3,
+                    "Height": 5,
+                    "Volume": 180,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                }
+            ]
+        },
+        {
+            "Customer ID": 53,
+            "x": 47,
+            "y": 67,
+            "Ready Time": 0,
+            "Due Date": 450,
+            "Service Time": 10,
+            "Demanded Mass": 335.12,
+            "Demanded Volume": 420,
+            "Items": [
+                {
+                    "Quantity": 1,
+                    "Weight": 117.2,
+                    "Length": 12,
+                    "Width": 5,
+                    "Height": 4,
+                    "Volume": 240,
+                    "Fragility": 1,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 217.92,
+                    "Length": 12,
+                    "Width": 3,
+                    "Height": 5,
+                    "Volume": 180,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                }
+            ]
+        },
+        {
+            "Customer ID": 47,
+            "x": 24,
+            "y": 15,
+            "Ready Time": 0,
+            "Due Date": 958,
+            "Service Time": 10,
+            "Demanded Mass": 605.5,
+            "Demanded Volume": 720,
+            "Items": [
+                {
+                    "Quantity": 1,
+                    "Weight": 249.9,
+                    "Length": 12,
+                    "Width": 5,
+                    "Height": 3,
+                    "Volume": 180,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 138.28,
+                    "Length": 10,
+                    "Width": 7,
+                    "Height": 3,
+                    "Volume": 210,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 217.32,
+                    "Length": 11,
+                    "Width": 5,
+                    "Height": 6,
+                    "Volume": 330,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                }
+            ]
+        },
+        {
+            "Customer ID": 29,
+            "x": 15,
+            "y": 26,
+            "Ready Time": 82,
+            "Due Date": 358,
+            "Service Time": 10,
+            "Demanded Mass": 517.89,
+            "Demanded Volume": 814,
+            "Items": [
+                {
+                    "Quantity": 1,
+                    "Weight": 33.52,
+                    "Length": 6,
+                    "Width": 6,
+                    "Height": 3,
+                    "Volume": 108,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 53.12,
+                    "Length": 7,
+                    "Width": 2,
+                    "Height": 8,
+                    "Volume": 112,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 213.93,
+                    "Length": 11,
+                    "Width": 6,
+                    "Height": 4,
+                    "Volume": 264,
+                    "Fragility": 1,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 217.32,
+                    "Length": 11,
+                    "Width": 5,
+                    "Height": 6,
+                    "Volume": 330,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                }
+            ]
+        },
+        {
+            "Customer ID": 58,
+            "x": 53,
+            "y": 24,
+            "Ready Time": 279,
+            "Due Date": 485,
+            "Service Time": 10,
+            "Demanded Mass": 472.8,
+            "Demanded Volume": 780,
+            "Items": [
+                {
+                    "Quantity": 1,
+                    "Weight": 117.2,
+                    "Length": 12,
+                    "Width": 5,
+                    "Height": 4,
+                    "Volume": 240,
+                    "Fragility": 1,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 138.28,
+                    "Length": 10,
+                    "Width": 7,
+                    "Height": 3,
+                    "Volume": 210,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 217.32,
+                    "Length": 11,
+                    "Width": 5,
+                    "Height": 6,
+                    "Volume": 330,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                }
+            ]
+        },
+        {
+            "Customer ID": 50,
+            "x": 19,
+            "y": 76,
+            "Ready Time": 162,
+            "Due Date": 398,
+            "Service Time": 10,
+            "Demanded Mass": 581.85,
+            "Demanded Volume": 1103,
+            "Items": [
+                {
+                    "Quantity": 1,
+                    "Weight": 116.18,
+                    "Length": 11,
+                    "Width": 7,
+                    "Height": 7,
+                    "Volume": 539,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 247.75,
+                    "Length": 12,
+                    "Width": 4,
+                    "Height": 8,
+                    "Volume": 384,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 217.92,
+                    "Length": 12,
+                    "Width": 3,
+                    "Height": 5,
+                    "Volume": 180,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                }
+            ]
+        },
+        {
+            "Customer ID": 34,
+            "x": 13,
+            "y": 17,
+            "Ready Time": 675,
+            "Due Date": 947,
+            "Service Time": 10,
+            "Demanded Mass": 304.56,
+            "Demanded Volume": 400,
+            "Items": [
+                {
+                    "Quantity": 1,
+                    "Weight": 33.52,
+                    "Length": 6,
+                    "Width": 6,
+                    "Height": 3,
+                    "Volume": 108,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 53.12,
+                    "Length": 7,
+                    "Width": 2,
+                    "Height": 8,
+                    "Volume": 112,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 217.92,
+                    "Length": 12,
+                    "Width": 3,
+                    "Height": 5,
+                    "Volume": 180,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                }
+            ]
+        },
+        {
+            "Customer ID": 28,
+            "x": 10,
+            "y": 56,
+            "Ready Time": 0,
+            "Due Date": 949,
+            "Service Time": 10,
+            "Demanded Mass": 520.34,
+            "Demanded Volume": 622,
+            "Items": [
+                {
+                    "Quantity": 1,
+                    "Weight": 249.9,
+                    "Length": 12,
+                    "Width": 5,
+                    "Height": 3,
+                    "Volume": 180,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 53.12,
+                    "Length": 7,
+                    "Width": 2,
+                    "Height": 8,
+                    "Volume": 112,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                },
+                {
+                    "Quantity": 1,
+                    "Weight": 217.32,
+                    "Length": 11,
+                    "Width": 5,
+                    "Height": 6,
+                    "Volume": 330,
+                    "Fragility": 0,
+                    "EnableHorizontalRotation": 1,
+                    "Rotated": "None"
+                }
+            ]
+        }
+    ]
+}
