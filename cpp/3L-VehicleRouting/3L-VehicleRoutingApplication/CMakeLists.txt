@@ -29,10 +29,10 @@ target_sources(${PROJECT_NAME} PRIVATE ${_HDRS} ${_SRCS})
 target_include_directories(${PROJECT_NAME} PUBLIC
 	${PROJECT_SOURCE_DIR}/include/${PROJECT_NAME}
 	${CMAKE_SOURCE_DIR}/external
-	${CMAKE_SOURCE_DIR}/VehicleRouting/include
 	${CMAKE_SOURCE_DIR}/ContainerLoading/ContainerLoading/include
 	${CMAKE_SOURCE_DIR}/ContainerLoading/CommonBasics/include
 )
+
 
 # Gurobi
 find_package(GUROBI REQUIRED)
@@ -47,4 +47,8 @@ if(CXX)
 		debug ${GUROBI_CXX_LIBRARY})
 endif()
 
-target_link_libraries(${PROJECT_NAME} PRIVATE VehicleRouting ContainerLoading CommonBasics)
+target_link_libraries(${PROJECT_NAME} PRIVATE ContainerLoading CommonBasics)
+
+get_target_property(TARGET_INCLUDES ${PROJECT_NAME} INCLUDE_DIRECTORIES)
+message(STATUS "Include directories for ${PROJECT_NAME}: ${TARGET_INCLUDES}")
+

@@ -168,18 +168,6 @@ struct ContainerLoadingParams
 {
     CPSolverParams CPSolver;
     LoadingProblemParams LoadingProblem;
-    BranchAndCutParameters BranchAndCut;
-
-   [[nodiscard]] double DetermineMaxRuntime(BranchAndCutParameters::CallType callType,
-                               double residualTime = std::numeric_limits<double>::max()) const
-    {
-        return std::min(BranchAndCut.TimeLimits.at(callType), residualTime);
-    }
-
-   [[nodiscard]] bool IsExact(BranchAndCutParameters::CallType callType) const
-    {
-        return callType == BranchAndCutParameters::CallType::Exact;
-    }
 };
 
 }

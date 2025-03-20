@@ -35,5 +35,4 @@ endif()
 # Build Dependencies
 add_subdirectory(CommonBasics)
 add_subdirectory(ContainerLoading)
-add_subdirectory(VehicleRouting)
 add_subdirectory(3L-VehicleRoutingApplication)

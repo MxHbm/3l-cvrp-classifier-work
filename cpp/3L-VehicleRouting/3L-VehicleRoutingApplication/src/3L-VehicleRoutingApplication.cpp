@@ -1,9 +1,7 @@
 // 3L-VehicleRoutingApplication.cpp : This file contains the 'main' function. Program execution begins and ends there.
 
-#include "VehicleRouting/Algorithms/BCRoutingParams.h"
-#include "VehicleRouting/Algorithms/BranchAndCutSolver.h"
-#include "VehicleRouting/Helper/HelperIO.h"
-#include "VehicleRouting/Model/Instance.h"
+#include "LoadingChecker.h"
+#include "Helper/HelperIO.h"
 
 #include "CLI11/CLI11.hpp"
 
@@ -15,10 +13,7 @@
 #include <filesystem>
 #include <iomanip>
 
-using namespace VehicleRouting;
-using namespace VehicleRouting::Algorithms;
-using namespace VehicleRouting::Model;
-using namespace VehicleRouting::Helper;
+using namespace ContainerLoading;
 
 void Run(std::string& inputFilePath,
          std::string& filename,
@@ -27,15 +22,16 @@ void Run(std::string& inputFilePath,
          bool enableTimeSuffix,
          int seedOffset)
 {
-    InputParameters inputParameters;
+    ContainerLoading::Algorithms::InputParameters inputParameters;
 
     if (parameterFile != "")
     {
-        inputParameters = HelperIO::ReadInputParameters(parameterFile);
+        inputParameters = Helper::HelperIO::ReadInputParameters(parameterFile);
     }
     else
     {
         inputParameters.ContainerLoading.LoadingProblem.Variant = LoadingProblemParams::VariantType::AllConstraints;
+
     }
 
     inputParameters.SetLoadingFlags();
@@ -73,14 +69,16 @@ void Run(std::string& inputFilePath,
         return; // or handle the error as needed
     }
 
-    auto instance = HelperIO::ParseInstanceJson(ifs);
+    std::cout << "Parameters read." << std::endl;
+
+    auto instance = Helper::HelperIO::ParseInstanceJson(ifs);
+    std::cout << "Instance parsed." << std::endl;
 
     ////std::ofstream ofs("logfile.txt");
     ////std::cout.rdbuf(ofs.rdbuf());
 
     // TODO: parametrize
     std::string startSolutionPath = inputFilePath + "../StartSolutions/Zhang/ConvertedSolutions/";
-    inputParameters.MIPSolver.Seed += seedOffset;
 
     for (int i = 0; i < 1; ++i)
     {
@@ -88,9 +86,9 @@ void Run(std::string& inputFilePath,
         {
             std::cout << "Run: " << i << "\n";
             GRBEnv env = GRBEnv(outputPath + "/" + instance.Name + ".LOG");
-            inputParameters.MIPSolver.Seed += i;
-            BranchAndCutSolver exactAlgorithm(&instance, &env, inputParameters, startSolutionPath, outputPath);
-            exactAlgorithm.Solve();
+            ContainerLoading::LoadingChecker checker(inputParameters, &instance, &env, startSolutionPath, outputPath);
+            //LoadingChecker checker(&instance, &env, inputParameters, startSolutionPath, outputPath);
+            std::cout << "Initialized Checker." << std::endl;
         }
         catch (GRBException& e)
         {

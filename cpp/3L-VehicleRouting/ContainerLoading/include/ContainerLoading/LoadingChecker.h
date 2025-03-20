@@ -3,27 +3,44 @@
 #include "CommonBasics/Helper/ModelServices.h"
 
 #include "ProblemParameters.h"
+#include "Model/Instance.h" // Ensure this header defines the Instance class
 
 #include "Algorithms/MultiContainer/BP_MIP_1D.h"
 #include "Model/ContainerLoadingInstance.h"
+#include "Algorithms/BCRoutingParams.h"
 
 #include <boost/dynamic_bitset.hpp>
 #include <boost/functional/hash.hpp>
 
 namespace ContainerLoading
 {
+using namespace Model;
 using namespace Algorithms;
 
 class LoadingChecker
 {
   public:
-    const ContainerLoadingParams Parameters;
+    ContainerLoadingParams Parameters;
 
-    explicit LoadingChecker(const ContainerLoadingParams& parameters) : Parameters(parameters)
+    // To be initialized
+    std::vector<Container> containers;
+
+    explicit LoadingChecker(const InputParameters& parameters,
+                            Instance* instance,
+                            GRBEnv* env,
+                            const std::string& startSolutionFolderPath,
+                            const std::string& outputPath) 
+      : mInputParameters(parameters)
+      , mEnv(env)
+      , mInstance(instance)
+      , mStartSolutionFolderPath(startSolutionFolderPath)
+      , mOutputPath(outputPath)
     {
         using enum LoadingFlag;
 
-        std::vector<LoadingFlag> usedLoadingFlags = {Complete, NoSupport, LifoNoSequence};
+        std::vector<LoadingFlag> usedLoadingFlags = {LoadingFlag::Complete,
+                                                     LoadingFlag::NoSupport,
+                                                     LoadingFlag::LifoNoSequence};
 
         constexpr size_t reservedSize = 1000;
         for (const auto flag: usedLoadingFlags)
@@ -36,7 +53,19 @@ class LoadingChecker
             mInfSets[flag & Parameters.LoadingProblem.LoadingFlags].reserve(reservedSize);
             mUnknownSets[flag & Parameters.LoadingProblem.LoadingFlags].reserve(reservedSize);
         }
+        
+        //Initialize Paramters for Container Loading
+        Parameters = mInputParameters.ContainerLoading;
+        //Initialize();
     }
+  private:
+    GRBEnv* mEnv;
+    Instance* mInstance;
+    InputParameters mInputParameters;
+    std::string mStartSolutionFolderPath;
+    std::string mOutputPath;
+
+    //LoadingStatus Initialize();
 
     [[nodiscard]] std::vector<Cuboid>
         SelectItems(const Collections::IdVector& nodeIds, std::vector<Group>& nodes, bool reversedDirection) const;

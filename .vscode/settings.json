@@ -10,15 +10,15 @@
     ],
     "cmake.debugConfig": {
         "args": [
-            "-i",
-            "${workspaceFolder}/data/input/3l-cvrp/",
-            "-f",
-            "E023-03g.json",
-            "-o",
-            "${workspaceFolder}/data/output/3l-cvrp/test/",
-            "-p",
-            "${workspaceFolder}/data/input/3l-cvrp/parameters/BenchmarkParameters_AllConstraints.json"
-        ]
+                "-i",
+                "${workspaceFolder}/data/input/3l-cvrp/test_input/",
+                "-f",
+                "142_n060_m200_bt10_18_2.json",
+                "-o",
+                "${workspaceFolder}/data/output/classifier/",
+                "-p",
+                "${workspaceFolder}/data/input/3l-cvrp/parameters/BenchmarkParameters_AllConstraints.json"
+            ]
     },
     "editor.formatOnSave": true,
     "files.associations": {
@@ -95,7 +95,41 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "variant": "cpp",
-        "span": "cpp"
+        "span": "cpp",
+        "xutility": "cpp",
+        "any": "cpp",
+        "charconv": "cpp",
+        "coroutine": "cpp",
+        "csetjmp": "cpp",
+        "csignal": "cpp",
+        "execution": "cpp",
+        "filesystem": "cpp",
+        "format": "cpp",
+        "future": "cpp",
+        "hash_map": "cpp",
+        "hash_set": "cpp",
+        "ios": "cpp",
+        "locale": "cpp",
+        "queue": "cpp",
+        "regex": "cpp",
+        "scoped_allocator": "cpp",
+        "source_location": "cpp",
+        "stack": "cpp",
+        "xfacet": "cpp",
+        "xhash": "cpp",
+        "xiosbase": "cpp",
+        "xlocale": "cpp",
+        "xlocbuf": "cpp",
+        "xlocinfo": "cpp",
+        "xlocmes": "cpp",
+        "xlocmon": "cpp",
+        "xlocnum": "cpp",
+        "xloctime": "cpp",
+        "xmemory": "cpp",
+        "xstring": "cpp",
+        "xtr1common": "cpp",
+        "xtree": "cpp",
+        "*.ipp": "cpp"
     },
     "clangd.arguments": [
         "--compile-commands-dir=build/Release"

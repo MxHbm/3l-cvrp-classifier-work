@@ -7,11 +7,11 @@
             "program": "${command:cmake.launchTargetPath}",
             "args": [
                 "-i",
-                "${workspaceFolder}/data/input/3l-cvrp/",
+                "${workspaceFolder}/data/input/3l-cvrp/test-input/",
                 "-f",
-                "E023-03g.json",
+                "142_n060_m200_bt10_13_5.json",
                 "-o",
-                "${workspaceFolder}/data/output/3l-cvrp/test/",
+                "${workspaceFolder}/data/output/classifier",
                 "-p",
                 "${workspaceFolder}/data/input/3l-cvrp/parameters/BenchmarkParameters_AllConstraints.json"
             ]

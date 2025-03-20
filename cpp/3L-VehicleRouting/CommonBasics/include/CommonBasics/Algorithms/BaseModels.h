@@ -1,7 +1,7 @@
 #pragma once
 
-#include "CommonBasics/Helper/MIPServices.h"
-#include "CommonBasics/Helper/ModelServices.h"
+#include "Helper/MIPServices.h"
+#include "Helper/ModelServices.h"
 
 #include <memory>
 #include <unordered_set>

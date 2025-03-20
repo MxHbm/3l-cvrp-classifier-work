@@ -1,14 +1,78 @@
 #include "LoadingChecker.h"
 #include "Algorithms/SingleContainer/OPP_CP_3D.h"
+#include <iostream>
 
 namespace ContainerLoading
 {
+    using namespace Model;
+    using namespace Algorithms;
+    /*
+    LoadingStatus LoadingChecker::Initialize()
+    { 
+        //mLogFile << "ProblemVariant: " << (int)mInputParameters.ContainerLoading.LoadingProblem.Variant << "\n";
+
+        containers.reserve(mInstance->Vehicles.size());
+        for (auto* vehicle: (mInstance->Vehicles)) // Use auto* to indicate it is a pointer
+        {
+            if (vehicle && !vehicle->Containers.empty()) // Check for null and empty vector
+            {
+                containers.emplace_back(vehicle->Containers[0]);
+            }
+        }
+        
+    
+        std::vector<Group> customerNodes;
+        customerNodes.reserve(mInstance->GetCustomers()->size());
+        for (const auto& node: *(mInstance->GetCustomers()))
+        {
+            customerNodes.emplace_back(node.InternId,
+                                       node.ExternId,
+                                       node.PositionX,
+                                       node.PositionY,
+                                       node.TotalWeight,
+                                       node.TotalVolume,
+                                       node.TotalArea,
+                                       node.Items);
+        }
+
+        this->SetBinPackingModel(mEnv, containers, customerNodes, mOutputPath);
+    
+        Collections::IdVector route = mInstance->CustomerIds;
+
+        auto items = this->SelectItems(route, customerNodes, false);
+
+        auto heurStatus = this->PackingHeuristic(PackingType::Complete, containers[0], route, items);
+
+        if (heurStatus != LoadingStatus::FeasOpt)
+        {   
+            //Break when heurStatus is not FeasOpt
+            std::cout<<"Heuristic status is not FeasOpt"<<std::endl;
+            return heurStatus;
+        }
+
+        auto exactStatus =
+            this->ConstraintProgrammingSolver(PackingType::Complete,
+                                                            containers[0],
+                                                            this->MakeBitset(mInstance->Nodes.size(), route),
+                                                            route,
+                                                            items,
+                                                            true);
+    
+        if (exactStatus != LoadingStatus::FeasOpt)
+        {   
+            std::cout << "Exact status is not FeasOpt" << std::endl;
+            return exactStatus;
+        }
+    }
+*/
+
+
 std::vector<Cuboid> LoadingChecker::SelectItems(const Collections::IdVector& nodeIds,
                                                 std::vector<Group>& nodes,
                                                 bool reversedDirection) const
 {
     std::vector<Cuboid> selectedItems;
-    selectedItems.reserve(nodes.size() * 3);
+    selectedItems.reserve(nodes.size() * 10);
     if (!reversedDirection)
     {
         for (size_t i = 0; i < nodeIds.size(); ++i)
@@ -392,7 +456,7 @@ LoadingFlag LoadingChecker::BuildMask(PackingType type) const
         case PackingType::LifoNoSequence:
             return LoadingFlag::LifoNoSequence & Parameters.LoadingProblem.LoadingFlags;
         default:
-            throw std::runtime_error("PackingType not implemented in mask builder.");
+            throw std::runtime_error("LoadingStatus not implemented in mask builder.");
     }
 
     return LoadingFlag();
