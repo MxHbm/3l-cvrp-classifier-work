@@ -2,6 +2,7 @@
 build/
 
 # results
+data/output/classifier/
 data/output/3l-cvrp/test/
 
 # input

@@ -6,24 +6,20 @@ namespace ContainerLoading
 {
     using namespace Model;
     using namespace Algorithms;
-    /*
+
     LoadingStatus LoadingChecker::Initialize()
     { 
         //mLogFile << "ProblemVariant: " << (int)mInputParameters.ContainerLoading.LoadingProblem.Variant << "\n";
 
         containers.reserve(mInstance->Vehicles.size());
-        for (auto* vehicle: (mInstance->Vehicles)) // Use auto* to indicate it is a pointer
+        for (const auto& vehicle: mInstance->Vehicles)
         {
-            if (vehicle && !vehicle->Containers.empty()) // Check for null and empty vector
-            {
-                containers.emplace_back(vehicle->Containers[0]);
-            }
+            containers.emplace_back(vehicle.Containers[0]);
         }
-        
-    
+
         std::vector<Group> customerNodes;
-        customerNodes.reserve(mInstance->GetCustomers()->size());
-        for (const auto& node: *(mInstance->GetCustomers()))
+        customerNodes.reserve(mInstance->GetCustomers().size());
+        for (const auto& node: mInstance->GetCustomers())
         {
             customerNodes.emplace_back(node.InternId,
                                        node.ExternId,
@@ -34,13 +30,14 @@ namespace ContainerLoading
                                        node.TotalArea,
                                        node.Items);
         }
+    
 
         this->SetBinPackingModel(mEnv, containers, customerNodes, mOutputPath);
     
         Collections::IdVector route = mInstance->CustomerIds;
 
         auto items = this->SelectItems(route, customerNodes, false);
-
+        /*
         auto heurStatus = this->PackingHeuristic(PackingType::Complete, containers[0], route, items);
 
         if (heurStatus != LoadingStatus::FeasOpt)
@@ -49,6 +46,7 @@ namespace ContainerLoading
             std::cout<<"Heuristic status is not FeasOpt"<<std::endl;
             return heurStatus;
         }
+        */
 
         auto exactStatus =
             this->ConstraintProgrammingSolver(PackingType::Complete,
@@ -56,15 +54,17 @@ namespace ContainerLoading
                                                             this->MakeBitset(mInstance->Nodes.size(), route),
                                                             route,
                                                             items,
-                                                            true);
+                                                            true,
+                                                            30);
     
         if (exactStatus != LoadingStatus::FeasOpt)
         {   
             std::cout << "Exact status is not FeasOpt" << std::endl;
             return exactStatus;
         }
+
+        return exactStatus;
     }
-*/
 
 
 std::vector<Cuboid> LoadingChecker::SelectItems(const Collections::IdVector& nodeIds,
@@ -77,10 +77,11 @@ std::vector<Cuboid> LoadingChecker::SelectItems(const Collections::IdVector& nod
     {
         for (size_t i = 0; i < nodeIds.size(); ++i)
         {
-            auto& items = nodes[nodeIds[i]].Items;
+            auto& items = nodes[i].Items;
 
             for (auto& item: items)
             {
+                //TODO : Exception has occurred: W32/0xC0000005
                 item.GroupId = nodeIds.size() - 1 - i;
                 selectedItems.push_back(item);
             }
@@ -90,7 +91,7 @@ std::vector<Cuboid> LoadingChecker::SelectItems(const Collections::IdVector& nod
     {
         for (size_t i = 0; i < nodeIds.size(); ++i)
         {
-            auto& items = nodes[nodeIds[i]].Items;
+            auto& items = nodes[i].Items;
 
             for (auto& item: items)
             {
@@ -136,12 +137,13 @@ LoadingStatus LoadingChecker::ConstraintProgrammingSolver(PackingType packingTyp
 
     auto loadingMask = BuildMask(packingType);
 
+    /*
     auto precheckStatus = GetPrecheckStatusCP(stopIds, set, loadingMask, isCallTypeExact);
     if (precheckStatus != LoadingStatus::Invalid)
     {
         return precheckStatus;
     }
-
+    */
     auto numberStops = stopIds.size();
     auto containerLoadingCP = ContainerLoadingCP(Parameters.CPSolver,
                                                  container,

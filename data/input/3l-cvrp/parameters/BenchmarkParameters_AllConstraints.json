@@ -16,7 +16,7 @@
         "TimeLimit": [
             [
                 "Exact",
-                1.7976931348623157e+308
+                30
             ],
             [
                 "ExactLimit",

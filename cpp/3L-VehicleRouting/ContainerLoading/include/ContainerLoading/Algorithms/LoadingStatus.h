@@ -1,4 +1,7 @@
 #pragma once
+#include <string>
+#include <iostream>
+#include <ostream>
 
 namespace ContainerLoading
 {
@@ -11,6 +14,22 @@ enum class LoadingStatus
     Infeasible,
     Unknown
 };
+
+// ✅ Function to convert enum to string
+inline std::string to_string(LoadingStatus status) {
+    switch (status) {
+        case LoadingStatus::Invalid: return "Invalid";
+        case LoadingStatus::FeasOpt: return "FeasOpt";
+        case LoadingStatus::Infeasible: return "Infeasible";
+        case LoadingStatus::Unknown: return "Unknown";
+        default: return "Unknown Status";
+    }
+}
+
+// ✅ Overload `<<` operator for easy printing
+inline std::ostream& operator<<(std::ostream& os, LoadingStatus status) {
+    return os << to_string(status);
+}
 
 enum class PackingType
 {
