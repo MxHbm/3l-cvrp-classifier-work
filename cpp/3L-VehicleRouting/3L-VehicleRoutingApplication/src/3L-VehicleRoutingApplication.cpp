@@ -87,8 +87,8 @@ void Run(std::string& inputFilePath,
             std::cout << "Run: " << i << "\n";
             GRBEnv env = GRBEnv(outputPath + "/" + instance.Name + ".LOG");
             ContainerLoading::LoadingChecker checker(inputParameters, &instance, &env, startSolutionPath, outputPath);
+            LoadingStatus status = checker.CheckExactRouteWithoutPrechecks();
             //LoadingChecker checker(&instance, &env, inputParameters, startSolutionPath, outputPath);
-            std::cout << "Initialized Checker." << std::endl;
         }
         catch (GRBException& e)
         {

@@ -7,7 +7,7 @@ namespace ContainerLoading
     using namespace Model;
     using namespace Algorithms;
 
-    LoadingStatus LoadingChecker::Initialize()
+    LoadingStatus LoadingChecker::CheckExactRouteWithoutPrechecks()
     { 
         //mLogFile << "ProblemVariant: " << (int)mInputParameters.ContainerLoading.LoadingProblem.Variant << "\n";
 
@@ -55,7 +55,7 @@ namespace ContainerLoading
                                                             route,
                                                             items,
                                                             true,
-                                                            30);
+                                                            30.0);
     
         if (exactStatus != LoadingStatus::FeasOpt)
         {   

@@ -21,7 +21,7 @@ class LoadingChecker
 {
   public:
     ContainerLoadingParams Parameters;
-
+    LoadingStatus CheckExactRouteWithoutPrechecks();
     // To be initialized
     std::vector<Container> containers;
 
@@ -36,7 +36,6 @@ class LoadingChecker
       , mStartSolutionFolderPath(startSolutionFolderPath)
       , mOutputPath(outputPath)
     {
-       std::cout << "Constructor" << std::endl;  
         using enum LoadingFlag;
 
         std::vector<LoadingFlag> usedLoadingFlags = {LoadingFlag::Complete,
@@ -57,9 +56,6 @@ class LoadingChecker
         
         //Initialize Paramters for Container Loading
         Parameters = mInputParameters.ContainerLoading;
-        LoadingStatus result = Initialize();
-        std::cout << "After Initialize" << std::endl;
-        std::cout << "Result: "<< result << std::endl;
     }
   private:
     GRBEnv* mEnv;
@@ -67,8 +63,6 @@ class LoadingChecker
     InputParameters mInputParameters;
     std::string mStartSolutionFolderPath;
     std::string mOutputPath;
-
-    LoadingStatus Initialize();
 
     [[nodiscard]] std::vector<Cuboid>
         SelectItems(const Collections::IdVector& nodeIds, std::vector<Group>& nodes, bool reversedDirection) const;
